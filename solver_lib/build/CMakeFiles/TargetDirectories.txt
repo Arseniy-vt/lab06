@@ -1,0 +1,3 @@
+/home/kali1/lab03/solver_lib/build/CMakeFiles/solver.dir
+/home/kali1/lab03/solver_lib/build/CMakeFiles/edit_cache.dir
+/home/kali1/lab03/solver_lib/build/CMakeFiles/rebuild_cache.dir

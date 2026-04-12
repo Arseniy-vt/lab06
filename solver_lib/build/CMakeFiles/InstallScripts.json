@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/kali1/lab03/solver_lib/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

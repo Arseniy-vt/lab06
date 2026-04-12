@@ -1,0 +1,10 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/kali1/lab03/solver_application/build/cmake_install.cmake",
+		"/home/kali1/lab03/solver_application/build/solver_lib_build/cmake_install.cmake",
+		"/home/kali1/lab03/solver_application/build/formatter_ex_lib_build/cmake_install.cmake",
+		"/home/kali1/lab03/solver_application/build/formatter_ex_lib_build/formatter_lib_build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

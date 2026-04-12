@@ -1,0 +1,12 @@
+/home/kali1/lab03/solver_application/build/CMakeFiles/equation.dir
+/home/kali1/lab03/solver_application/build/CMakeFiles/edit_cache.dir
+/home/kali1/lab03/solver_application/build/CMakeFiles/rebuild_cache.dir
+/home/kali1/lab03/solver_application/build/solver_lib_build/CMakeFiles/solver.dir
+/home/kali1/lab03/solver_application/build/solver_lib_build/CMakeFiles/edit_cache.dir
+/home/kali1/lab03/solver_application/build/solver_lib_build/CMakeFiles/rebuild_cache.dir
+/home/kali1/lab03/solver_application/build/formatter_ex_lib_build/CMakeFiles/formatter_ex.dir
+/home/kali1/lab03/solver_application/build/formatter_ex_lib_build/CMakeFiles/edit_cache.dir
+/home/kali1/lab03/solver_application/build/formatter_ex_lib_build/CMakeFiles/rebuild_cache.dir
+/home/kali1/lab03/solver_application/build/formatter_ex_lib_build/formatter_lib_build/CMakeFiles/formatter.dir
+/home/kali1/lab03/solver_application/build/formatter_ex_lib_build/formatter_lib_build/CMakeFiles/edit_cache.dir
+/home/kali1/lab03/solver_application/build/formatter_ex_lib_build/formatter_lib_build/CMakeFiles/rebuild_cache.dir
