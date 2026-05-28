@@ -26,13 +26,15 @@ jobs:
       - name: Build
         run: cmake --build build
       
-      - name: Test
-        shell: bash
+      - name: Test on Linux or macOS
+        if: matrix.os != 'windows-latest'
         working-directory: build
         run: |
-          if [ "${{ matrix.os }}" != "windows-latest" ]; then
-            chmod +x solver_application/solver
-            echo "2 30 60" | ./solver_application/solver
-          else
-            .\solver_application\Debug\solver.exe < nul
-          fi
+          chmod +x solver_application/solver
+          echo "2 30 60" | ./solver_application/solver
+      
+      - name: Test on Windows
+        if: matrix.os == 'windows-latest'
+        working-directory: build
+        run: |
+          Write-Output "2 30 60" | .\solver_application\Debug\solver.exe
