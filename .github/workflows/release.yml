@@ -1,0 +1,83 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  linux:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Install
+        run: sudo apt update && sudo apt install -y dpkg-dev rpm
+      
+      - name: Configure
+        run: cmake -B build -D CMAKE_BUILD_TYPE=Release
+      
+      - name: Build
+        run: cmake --build build --config Release
+      
+      - name: Create packages
+        run: |
+          cd build
+          cpack -G DEB
+          cpack -G RPM
+          cpack -G TGZ
+      
+      - name: Upload
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            build/*.deb
+            build/*.rpm
+            build/*.tar.gz
+
+  win32:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Configure
+        run: cmake -B build -D CMAKE_BUILD_TYPE=Release
+      
+      - name: Build
+        run: cmake --build build --config Release
+      
+      - name: Create
+        run: |
+          cd build
+          cpack -G WIX -C Release
+      
+      - name: Upload
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            build/*.msi
+
+  macos:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Configure
+        run: cmake -B build -D CMAKE_BUILD_TYPE=Release
+      
+      - name: Build
+        run: cmake --build build --config Release
+      
+      - name: Create
+        run: |
+          cd build
+          cpack -G DragNDrop
+      
+      - name: Upload
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            build/*.dmg
